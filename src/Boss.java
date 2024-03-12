@@ -19,4 +19,21 @@ public class Boss {
         this.desc = descPool[random];
 
     }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public String attack() {
+        this.health -= 100;
+        if(this.health <= 0) {
+            return "The " + this.desc + " Is Defeated!";
+        }else {
+            return "Hit!";
+        }
+    }
 }
